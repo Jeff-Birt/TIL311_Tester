@@ -1,15 +1,28 @@
 /*
  Simple test program for TI TIL311 Hex LED displays
- Jeffrey T. Birt (Hey Birt!) http://www.soigeneris.com , http://www.youtube.com/c/HeyBirt
+ Jeffrey T. Birt (Hey Birt!) 
+ website: http://www.soigeneris.com
+ YouTube: http://www.youtube.com/c/HeyBirt
 */
 
-// NOTES: Used a Arduino as that is what I had at hand
-// You coudl use any Arudion for this by adjusting the DDRx and PORTx lines
+// NOTES: Used a Arduino Mega 2560 as that is what I had at hand
+// You could use any Arudio for this by adjusting the DDRx and PORTx lines
+
+// Mega	2560	Arduino	TIL311	TIL311
+// Port			Pin		Pin		Name
+// PA0			22		3		Data A
+// PA1			23		2		Data B
+// PA2			24		13		Data C
+// PA3			25		12		Data D
+// PA4			26		4		Left Decimal
+// PA5			27		10		Right Decimal
+// PA6			28		8		Blank
+// PA7			29		5		Strobe
 
 #define DATA_ATOD	0x0F // active high
 #define L_DEC		0x10 // active low
 #define R_DEC		0x20 // active low
-#define BLANK		0x40 // active low
+#define BLANK		0x40 // active high
 #define STROBE		0x80 // active low
 
 void setup() 
